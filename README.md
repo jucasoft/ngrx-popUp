@@ -1,20 +1,20 @@
 # obbiettivi
-Riuscire a far funzionare meglio il sistema delle rotte per aprire le popUp
-Verificare che un custom serializer possa sostituire l'estensione dello store attuale.
+[-] Riuscire a far funzionare meglio il sistema delle rotte per aprire le popUp  
+[+] Verificare che un custom serializer possa sostituire l'estensione dello store attuale.  
+    Creacto un serializzatore Custo per aggiungere allo store delle rotte i dati di NavigationExtras  
 
 
+# Comandi lanciati in fese di creazione
+ng generate ngrx-entity-crud:crud-store --name=coin --clazz=Coin  
+ng generate ngrx-entity-crud:crud-section --clazz=Coin  
 
-# Comandi per la creazione
-ng generate ngrx-entity-crud:crud-store --name=coin --clazz=Coin
-ng generate ngrx-entity-crud:crud-section --clazz=Coin
+ng generate ngrx-entity-crud:crud-store --name=book --clazz=Book  
+ng generate ngrx-entity-crud:crud-section --clazz=Book  
 
-ng generate ngrx-entity-crud:crud-store --name=book --clazz=Book
-ng generate ngrx-entity-crud:crud-section --clazz=Book
+ng generate ngrx-entity-crud:crud-store --name=home --clazz=Home  
+ng generate ngrx-entity-crud:crud-section --clazz=Home  
 
-ng generate ngrx-entity-crud:crud-store --name=home --clazz=Home
-ng generate ngrx-entity-crud:crud-section --clazz=Home
-
-# tracciare i cambiamenti alla history
+# tracciare i cambiamenti della history
 
 ## Method 1:
 var back = window.history.back;
