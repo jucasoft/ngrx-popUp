@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "start:server": "node fake-server/server.js",
+    "start": "node server.js",
+    "start:dev": "ng serve",
     "build": "ng build",
-    "test": "ng test",
+    "postinstall": "ng build --aot --prod",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },

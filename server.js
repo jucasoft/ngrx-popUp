@@ -1,11 +1,19 @@
+const express = require('express');
 const jsonServer = require('json-server');
 const server = jsonServer.create();
 const path = require('path');
 const router = jsonServer.router(path.join(__dirname, 'db.json'));
 const middlewares = jsonServer.defaults();
 
-server.use(middlewares);
-server.use(router);
+// Serve static files....
+server.use(express.static(__dirname + '/dist/ngrx-data-flow'));
+
+server.use('/api/v1', middlewares);
+server.use('/api/v1', router);
+
+server.get('**', function (req, res) {
+  res.sendFile(path.join(__dirname + '/dist/ngrx-data-flow/index.html'));
+});
 
 router.render = (req, res) => {
   res.jsonp({
@@ -13,6 +21,6 @@ router.render = (req, res) => {
   })
 };
 
-server.listen(3000, (res) => {
+server.listen(process.env.PORT || 3000, (res) => {
   console.log('JSON Server is running on: http://localohost:3000');
 });
