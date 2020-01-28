@@ -10,31 +10,31 @@ import {Observable, of} from "rxjs";
 export class HomeService extends BaseCrudService<Home> {
   protected service = environment.webServiceUri + 'home';
 
-  search(value?: ICriteria): Observable<Response<Home[]>> {
-    return of({
-      hasError: false,
-      message: '',
-      data: [
-        {
-          id: '1',
-          value: '10',
-          name: 'xxxx',
-          description: 'xxxx'
-        },
-        {
-          id: '2',
-          value: '20',
-          name: 'xxxx',
-          description: 'xxxx'
-        },
-        {
-          id: '3',
-          value: '30',
-          name: 'xxxx',
-          description: 'xxxx'
-        }
-      ]
-    });
-  }
+  // search(value?: ICriteria): Observable<Response<Home[]>> {
+  //   return of({
+  //     hasError: false,
+  //     message: '',
+  //     data: [
+  //       {
+  //         id: '1',
+  //         value: '10',
+  //         name: 'xxxx',
+  //         description: 'xxxx'
+  //       },
+  //       {
+  //         id: '2',
+  //         value: '20',
+  //         name: 'xxxx',
+  //         description: 'xxxx'
+  //       },
+  //       {
+  //         id: '3',
+  //         value: '30',
+  //         name: 'xxxx',
+  //         description: 'xxxx'
+  //       }
+  //     ]
+  //   });
+  // }
 
 }
