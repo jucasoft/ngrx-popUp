@@ -6,13 +6,13 @@ const router = jsonServer.router(path.join(__dirname, 'db.json'));
 const middlewares = jsonServer.defaults();
 
 // Serve static files....
-server.use(express.static(__dirname + '/dist/ngrx-data-flow'));
+server.use(express.static(__dirname + '/dist/ngrx-popUp'));
 
 server.use('/api/v1', middlewares);
 server.use('/api/v1', router);
 
 server.get('**', function (req, res) {
-  res.sendFile(path.join(__dirname + '/dist/ngrx-data-flow/index.html'));
+  res.sendFile(path.join(__dirname + '/dist/ngrx-popUp/index.html'));
 });
 
 router.render = (req, res) => {

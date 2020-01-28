@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngrx-entity-crud-prime-ng-boilerplate": {
+    "ngrx-popUp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngrx-entity-crud-prime-ng-boilerplate",
+            "outputPath": "dist/ngrx-popUp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,11 +24,6 @@
                 "glob": "**/*",
                 "input": "src/assets/",
                 "output": "/assets/"
-              },
-              {
-                "glob": "favicon.ico",
-                "input": "/src",
-                "output": "/"
               }
             ],
             "styles": [
@@ -79,18 +74,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngrx-entity-crud-prime-ng-boilerplate:build"
+            "browserTarget": "ngrx-popUp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngrx-entity-crud-prime-ng-boilerplate:build:production"
+              "browserTarget": "ngrx-popUp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngrx-entity-crud-prime-ng-boilerplate:build"
+            "browserTarget": "ngrx-popUp:build"
           }
         },
         "test": {
@@ -101,7 +96,6 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
               "src/assets"
             ],
             "styles": [
@@ -127,15 +121,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngrx-entity-crud-prime-ng-boilerplate:serve"
+            "devServerTarget": "ngrx-popUp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngrx-entity-crud-prime-ng-boilerplate:serve:production"
+              "devServerTarget": "ngrx-popUp:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "ngrx-entity-crud-prime-ng-boilerplate"
+  "defaultProject": "ngrx-popUp"
 }
