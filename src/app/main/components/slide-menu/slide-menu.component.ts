@@ -51,51 +51,57 @@ export class SlideMenuComponent implements OnInit, OnDestroy {
       {
         label: 'Home',
         icon: 'pi pi-fw pi-user-plus',
-        command: (event$) => {
-          // invoco il router per cambiare pagina
-          this.store$.dispatch(RouterStoreActions.RouterGo({path: ['home']}));
+        items: [
+          {
+            label: 'Home',
+            icon: 'pi pi-fw pi-user-plus',
+            command: (event$) => {
+              // invoco il router per cambiare pagina
+              this.store$.dispatch(RouterStoreActions.RouterGo({path: ['home']}));
 
-          // salvo nello store del menù l'elemento selezionato.
-          this.store$.dispatch(SlideMenuStoreActions.Select({
-            item: {
-              data: {},
-              breadcrumb: ['Home']
+              // salvo nello store del menù l'elemento selezionato.
+              this.store$.dispatch(SlideMenuStoreActions.Select({
+                item: {
+                  data: {},
+                  breadcrumb: ['Home']
+                }
+              }));
             }
-          }));
-        }
+          },
+          {
+            label: 'Book',
+            icon: 'pi pi-fw pi-user-plus',
+            command: (event$) => {
+              // invoco il router per cambiare pagina
+              this.store$.dispatch(RouterStoreActions.RouterGo({path: ['book']}));
+
+              // salvo nello store del menù l'elemento selezionato.
+              this.store$.dispatch(SlideMenuStoreActions.Select({
+                item: {
+                  data: {},
+                  breadcrumb: ['Book']
+                }
+              }));
+            }
+          },
+          {
+            label: 'Coin',
+            icon: 'pi pi-fw pi-user-plus',
+            command: (event$) => {
+              // invoco il router per cambiare pagina
+              this.store$.dispatch(RouterStoreActions.RouterGo({path: ['coin']}));
+
+              // salvo nello store del menù l'elemento selezionato.
+              this.store$.dispatch(SlideMenuStoreActions.Select({
+                item: {
+                  data: {},
+                  breadcrumb: ['Coin']
+                }
+              }));
+            }
+          }
+        ]
       },
-      {
-        label: 'Book',
-        icon: 'pi pi-fw pi-user-plus',
-        command: (event$) => {
-          // invoco il router per cambiare pagina
-          this.store$.dispatch(RouterStoreActions.RouterGo({path: ['book']}));
-
-          // salvo nello store del menù l'elemento selezionato.
-          this.store$.dispatch(SlideMenuStoreActions.Select({
-            item: {
-              data: {},
-              breadcrumb: ['Book']
-            }
-          }));
-        }
-      },
-      {
-        label: 'Coin',
-        icon: 'pi pi-fw pi-user-plus',
-        command: (event$) => {
-          // invoco il router per cambiare pagina
-          this.store$.dispatch(RouterStoreActions.RouterGo({path: ['coin']}));
-
-          // salvo nello store del menù l'elemento selezionato.
-          this.store$.dispatch(SlideMenuStoreActions.Select({
-            item: {
-              data: {},
-              breadcrumb: ['Coin']
-            }
-          }));
-        }
-      }
     ];
     this.items = items;
     this.store$.dispatch(SlideMenuStoreActions.Select({
