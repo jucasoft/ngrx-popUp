@@ -3,11 +3,11 @@ import * as CoinStoreSelectors from './selectors';
 import * as CoinStoreState from './state';
 
 export {
-	CoinStoreModule
+  CoinStoreModule
 } from './coin-store.module';
 
 export {
-	CoinStoreActions,
-	CoinStoreSelectors,
-	CoinStoreState
+  CoinStoreActions,
+  CoinStoreSelectors,
+  CoinStoreState
 };

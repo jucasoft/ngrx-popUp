@@ -11,10 +11,10 @@ import {Home} from '@models/vo/home';
 })
 export class HomeMainComponent implements OnInit {
 
+  actions: Actions<Home> = HomeStoreActions.actions;
+
   constructor(private readonly store$: Store<RootStoreState.State>) {
   }
-
-  actions: Actions<Home> = HomeStoreActions.actions;
 
   ngOnInit() {
     // this.ruleTables$ = this.store$.pipe(

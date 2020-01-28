@@ -11,10 +11,10 @@ import {Book} from '@models/vo/book';
 })
 export class BookMainComponent implements OnInit {
 
+  actions: Actions<Book> = BookStoreActions.actions;
+
   constructor(private readonly store$: Store<RootStoreState.State>) {
   }
-
-  actions: Actions<Book> = BookStoreActions.actions;
 
   ngOnInit() {
     // this.ruleTables$ = this.store$.pipe(

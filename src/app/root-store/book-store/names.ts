@@ -1,3 +1,3 @@
 export class Names {
-	static NAME = 'book';
+  static NAME = 'book';
 }

@@ -11,7 +11,7 @@ import {CustomRouterStateSerializer} from '@root-store/router-store/custom-route
     CommonModule,
     StoreModule.forFeature('router', routerReducer),
     EffectsModule.forFeature([RouterEffects]),
-    StoreRouterConnectingModule.forRoot({stateKey: 'router', })
+    StoreRouterConnectingModule.forRoot({stateKey: 'router',})
   ],
   declarations: [],
   providers: [

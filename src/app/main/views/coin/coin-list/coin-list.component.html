@@ -7,15 +7,15 @@
       <th>actions</th>
     </tr>
   </ng-template>
-  <ng-template pTemplate="body" let-item>
+  <ng-template let-item pTemplate="body">
     <tr>
       <td *ngFor="let col of cols">
         {{item[col]}}
       </td>
       <td>
-        <button pButton type="button" icon="fa fa-edit" class="mr-1" (click)="onEdit(item)"></button>
-        <button pButton type="button" icon="fa fa-copy" class="mr-1" (click)="onCopy(item)"></button>
-        <button pButton type="button" icon="fa fa-trash" class="mr-1 ui-button-danger" (click)="onDelete(item)"></button>
+        <button (click)="onEdit(item)" class="mr-1" icon="fa fa-edit" pButton type="button"></button>
+        <button (click)="onCopy(item)" class="mr-1" icon="fa fa-copy" pButton type="button"></button>
+        <button (click)="onDelete(item)" class="mr-1 ui-button-danger" icon="fa fa-trash" pButton type="button"></button>
       </td>
     </tr>
   </ng-template>

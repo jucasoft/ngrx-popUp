@@ -6,9 +6,9 @@ import {RootStoreState} from '../../../root-store/';
   selector: 'app-footer',
   template: `
     <footer class="footer">
-            <div class="float-left">
-              <small>&#160;footer&#160;</small>
-            </div>
+      <div class="float-left">
+        <small>&#160;footer&#160;</small>
+      </div>
     </footer>
   `,
   styles: [`

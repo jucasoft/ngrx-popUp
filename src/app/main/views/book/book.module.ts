@@ -12,6 +12,7 @@ import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
 import {SearchComponent} from '@components/search/search.component';
 import {PipesModule} from '@core/pipe/pipes.module';
+
 //testaaa
 @NgModule({
   declarations: [

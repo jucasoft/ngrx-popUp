@@ -11,10 +11,10 @@ import {Coin} from '@models/vo/coin';
 })
 export class CoinMainComponent implements OnInit {
 
+  actions: Actions<Coin> = CoinStoreActions.actions;
+
   constructor(private readonly store$: Store<RootStoreState.State>) {
   }
-
-  actions: Actions<Coin> = CoinStoreActions.actions;
 
   ngOnInit() {
     // this.ruleTables$ = this.store$.pipe(

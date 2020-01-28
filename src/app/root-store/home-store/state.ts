@@ -2,7 +2,7 @@ import {createCrudEntityAdapter, EntityCrudAdapter, EntityCrudState} from 'ngrx-
 import {Home} from '@models/vo/home';
 
 export const adapter: EntityCrudAdapter<Home> = createCrudEntityAdapter<Home>({
-	selectId: model => Home.selectId(model),
+  selectId: model => Home.selectId(model),
 });
 
 export interface State extends EntityCrudState<Home> {

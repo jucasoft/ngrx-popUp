@@ -35,10 +35,10 @@ import {MenuItem} from 'primeng/api';
 })
 export class SlideMenuComponent implements OnInit, OnDestroy {
 
+  items: MenuItem[];
+
   constructor(private readonly store$: Store<RootStoreState.State>) {
   }
-
-  items: MenuItem[];
 
   ngOnDestroy(): void {
   }

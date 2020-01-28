@@ -4,8 +4,8 @@ import {CoinStoreState} from '@root-store/coin-store';
 import {SlideMenuStoreState} from '@root-store/slide-menu-store';
 
 export interface State {
-home:HomeStoreState.State;
-book:BookStoreState.State;
-coin:CoinStoreState.State;
+  home: HomeStoreState.State;
+  book: BookStoreState.State;
+  coin: CoinStoreState.State;
   slide_menu: SlideMenuStoreState.State;
 }

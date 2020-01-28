@@ -3,11 +3,11 @@ import * as BookStoreSelectors from './selectors';
 import * as BookStoreState from './state';
 
 export {
-	BookStoreModule
+  BookStoreModule
 } from './book-store.module';
 
 export {
-	BookStoreActions,
-	BookStoreSelectors,
-	BookStoreState
+  BookStoreActions,
+  BookStoreSelectors,
+  BookStoreState
 };
