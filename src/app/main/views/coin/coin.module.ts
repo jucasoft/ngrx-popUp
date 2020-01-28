@@ -10,16 +10,14 @@ import {TableModule} from 'primeng/table';
 import {DialogModule} from 'primeng/dialog';
 import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
-import {SearchComponent} from '@components/search/search.component';
 import {PipesModule} from '@core/pipe/pipes.module';
+import {SearchModule} from '@components/search/search.module';
 
-//testaaa
 @NgModule({
   declarations: [
     CoinEditComponent,
     CoinMainComponent,
     CoinListComponent,
-    SearchComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +28,8 @@ import {PipesModule} from '@core/pipe/pipes.module';
     DialogModule,
     ButtonModule,
     InputTextModule,
-    PipesModule
+    PipesModule,
+    SearchModule,
   ],
   providers: [],
   entryComponents: []
