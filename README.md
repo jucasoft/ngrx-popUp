@@ -1,8 +1,8 @@
 # obbiettivi
 [-] Riuscire a far funzionare meglio il sistema delle rotte per aprire le popUp  
 [+] Verificare che un custom serializer possa sostituire l'estensione dello store attuale.  
-    Creacto un serializzatore Custo per aggiungere allo store delle rotte i dati di NavigationExtras  
-
+    - Creacto un serializzatore custom per aggiungere allo store delle rotte i dati di NavigationExtras  
+    
 
 # Comandi lanciati in fese di creazione
 ng generate ngrx-entity-crud:crud-store --name=coin --clazz=Coin  
