@@ -43,9 +43,9 @@ src/
 |  +- ...                       additional modules and components
 + ...
 ```
-# test apertura popUP
-    entrare in una delle sezioni home, book, coin
-    nella colonna "Actions" per ogni riga sono presenti dei pulsanti, cliccare su uno dei pulsanti blu (modifica e copia) per aprire la popUP
+# Test apertura popUP
+Entrare in una delle sezioni home, book, coin.  
+Nella colonna "Actions" per ogni riga sono presenti dei pulsanti, cliccare su uno dei pulsanti blu (modifica e copia) per aprire la popUP
 
 # TODO
 [-] Riuscire a far funzionare meglio il sistema delle rotte per aprire le popUp  
@@ -63,7 +63,7 @@ ng generate ngrx-entity-crud:crud-section --clazz=Book
 ng generate ngrx-entity-crud:crud-store --name=home --clazz=Home  
 ng generate ngrx-entity-crud:crud-section --clazz=Home  
 
-# tracciare i cambiamenti della history
+# Tracciare i cambiamenti della history
 
 ## Method 1:
 var back = window.history.back;
