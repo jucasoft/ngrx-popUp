@@ -1,4 +1,53 @@
-# obbiettivi
+# Info struttura
+```
+src/                            
+|- app/                         
+|  |- core/                     
+|  |  |- components/
+|  |  |- directive/
+|  |  |- interceptors/
+|  |  |- models/
+|  |  |- pipe/
+|  |  +- utils/
+|  |- main/                     
+|  |  |- components/
+|  |  |- models/
+|  |  |- services/
+|  |  +- views/
+|  |  |  |-  book/
+|  |  |  |  |-  ...
+|  |  |  |  |-  book-edit/      popUp per la modifica
+|  |  |  |  |-  ...
+|  |  |  |-  coin/
+|  |  |  |  |-  ...
+|  |  |  |  |-  coin-edit/      popUp per la modifica
+|  |  |  |  |-  ...
+|  |  |  |-  home/
+|  |  |  |  |-  ...
+|  |  |  |  |-  home-edit/      popUp per la modifica
+|  |  |  |  |-  ...
+|  |- root-store/               store per la gestione delle rotte
+|  |  |- router-store/     
+|  |  |  |-  ...
+|  |  |  |-  custom-router-state-serializer.ts  -> aggiunge i valori di NavigationExtras allo store.
+|  |  |  |-  pop-up-base.component.ts           -> componente base per l'implementazione delle popUP
+|  |  |  |-  ...
+|  |  |- index.ts
+|  |  |- root-reducer.ts
+|  |  |- root-store.module.ts
+|  |  |- selectors.ts
+|  |  +- state.ts
+|  |- app.component.*           app root component (shell)
+|  |- app.module.ts             app root module definition
+|  |- app.routing.ts            app routes
+|  +- ...                       additional modules and components
++ ...
+```
+# test apertura popUP
+    entrare in una delle sezioni home, book, coin
+    nella colonna "Actions" per ogni riga sono presenti dei pulsanti, cliccare su uno dei pulsanti blu (modifica e copia) per aprire la popUP
+
+# TODO
 [-] Riuscire a far funzionare meglio il sistema delle rotte per aprire le popUp  
 [+] Verificare che un custom serializer possa sostituire l'estensione dello store attuale.  
     - Creacto un serializzatore custom per aggiungere allo store delle rotte i dati di NavigationExtras  

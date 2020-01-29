@@ -51,6 +51,7 @@ export class SlideMenuComponent implements OnInit, OnDestroy {
       {
         label: 'Home',
         icon: 'pi pi-fw pi-user-plus',
+        expanded: true,
         items: [
           {
             label: 'Home',

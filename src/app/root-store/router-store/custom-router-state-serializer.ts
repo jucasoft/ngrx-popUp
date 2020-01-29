@@ -16,6 +16,7 @@ export class CustomRouterStateSerializer
   }
 
   serialize(routerState: RouterStateSnapshot): CustomSerializedRouterStateSnapshot {
+    console.log('CustomRouterStateSerializer.serialize(routerState: RouterStateSnapshot): CustomSerializedRouterStateSnapshot');
     const navigation = this.router.getCurrentNavigation();
     const extras = navigation.extras;
     return {
@@ -28,7 +29,6 @@ export class CustomRouterStateSerializer
   private serializeRoute(
     route: ActivatedRouteSnapshot
   ): ActivatedRouteSnapshot {
-    console.log('CustomRouterStateSerializer.serializeRoute()');
     const children = route.children.map(c => this.serializeRoute(c));
     return {
       params: route.params,
