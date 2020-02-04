@@ -1,5 +1,5 @@
 # Passare dati e aprire popUp con @ngrx/router-store
-
+L'applicazione si trova su [ngrx-popup](https://ngrx-popup.herokuapp.com/)
 ## modifiche effettuate
  - @ngrx/router-store, aggiunto due attributi allo store 'primary' e 'popUp' :
  ````
