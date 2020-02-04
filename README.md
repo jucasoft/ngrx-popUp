@@ -1,4 +1,4 @@
-# pro e contro nell'aprire le popUP da rotta
+# Passare dati e aprire popUp con @ngrx/router-store
  ## PRO
  Si ereditano i vantaggi offerti dalle rotte:
  - Lazy Loading
@@ -22,7 +22,7 @@
 ```
  
  ## Contro
- - per ogni route-outlet è possibile aprire una sola PopUp. 
+ - per ogni route-outlet è possibile aprire una sola PopUp/pagina. 
         
  
 # Info struttura
