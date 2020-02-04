@@ -22,11 +22,9 @@ export class CoinListComponent implements OnInit {
 
   constructor(private store$: Store<RootStoreState.State>,
               private confirmationService: ConfirmationService) {
-    console.log('CoinListComponent.constructor()');
   }
 
   ngOnInit() {
-    console.log('CoinListComponent.ngOnInit()');
 
     this.collection$ = this.store$.select(
       CoinStoreSelectors.selectAll
@@ -45,33 +43,31 @@ export class CoinListComponent implements OnInit {
   }
 
   onEdit(item) {
-    console.log('CoinListComponent.onEdit()');
 
-    const state: PopUpData<Coin> = {
+    const data: PopUpData<Coin> = {
       item,
       props: {title: 'Edit Coin', route: 'coin'}
     };
 
     // apro la popUP
-    this.store$.dispatch(RouterStoreActions.RouterGo({
+    this.store$.dispatch(RouterStoreActions.RouterGoPopUp({
       path: ['coin', {outlets: {popUp: ['edit']}}],
-      extras: {state}
+      data
     }));
 
   }
 
   onCopy(value) {
-    console.log('CoinListComponent.onCopy()');
 
     const item = {...{}, ...value, ...{id: null}};
-    const state: PopUpData<Coin> = {
+    const data: PopUpData<Coin> = {
       item,
       props: {title: 'Copy Coin', route: 'coin'}
     };
 
-    this.store$.dispatch(RouterStoreActions.RouterGo({
+    this.store$.dispatch(RouterStoreActions.RouterGoPopUp({
       path: ['coin', {outlets: {popUp: ['edit']}}],
-      extras: {state}
+      data
     }));
 
   }

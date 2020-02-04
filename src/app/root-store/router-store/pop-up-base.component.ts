@@ -30,21 +30,18 @@ export class PopUpBaseComponent<T> implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    console.log('PopUpBaseComponent.ngOnInit()');
-    this.subscription = this.store$.select(RouterStoreSelectors.selectExtra).pipe(
+    this.subscription = this.store$.select(RouterStoreSelectors.selectPopUp).pipe(
       take(1),
     ).subscribe(
-      value => this.setState(evalData(() => value.state as PopUpData<T>, null))
+      data => this.setState(evalData(() => data as PopUpData<T>, null))
     );
   }
 
   ngOnDestroy(): void {
-    console.log('PopUpBaseComponent.ngOnDestroy()');
     this.subscription.unsubscribe();
   }
 
   setState(value: PopUpData<T>): void {
-    console.log('PopUpBaseComponent.setItem()');
     if (value.props) {
       this.title = value.props.title || this.title;
       this.route = value.props.route || this.route;

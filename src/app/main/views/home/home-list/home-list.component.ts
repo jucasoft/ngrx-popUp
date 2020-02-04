@@ -22,11 +22,9 @@ export class HomeListComponent implements OnInit {
 
   constructor(private store$: Store<RootStoreState.State>,
               private confirmationService: ConfirmationService) {
-    console.log('HomeListComponent.constructor()');
   }
 
   ngOnInit() {
-    console.log('HomeListComponent.ngOnInit()');
 
     this.collection$ = this.store$.select(
       HomeStoreSelectors.selectAll
@@ -45,33 +43,30 @@ export class HomeListComponent implements OnInit {
   }
 
   onEdit(item) {
-    console.log('HomeListComponent.onEdit()');
 
-    const state: PopUpData<Home> = {
+    const data: PopUpData<Home> = {
       item,
       props: {title: 'Edit Home', route: 'home'}
     };
 
     // apro la popUP
-    this.store$.dispatch(RouterStoreActions.RouterGo({
+    this.store$.dispatch(RouterStoreActions.RouterGoPopUp({
       path: ['home', {outlets: {popUp: ['edit']}}],
-      extras: {state}
+      data
     }));
 
   }
 
   onCopy(value) {
-    console.log('HomeListComponent.onCopy()');
-
     const item = {...{}, ...value, ...{id: null}};
-    const state: PopUpData<Home> = {
+    const data: PopUpData<Home> = {
       item,
       props: {title: 'Copy Home', route: 'home'}
     };
 
-    this.store$.dispatch(RouterStoreActions.RouterGo({
+    this.store$.dispatch(RouterStoreActions.RouterGoPopUp({
       path: ['home', {outlets: {popUp: ['edit']}}],
-      extras: {state}
+      data
     }));
 
   }

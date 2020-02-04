@@ -22,11 +22,9 @@ export class BookListComponent implements OnInit {
 
   constructor(private store$: Store<RootStoreState.State>,
               private confirmationService: ConfirmationService) {
-    console.log('BookListComponent.constructor()');
   }
 
   ngOnInit() {
-    console.log('BookListComponent.ngOnInit()');
 
     this.collection$ = this.store$.select(
       BookStoreSelectors.selectAll
@@ -45,33 +43,31 @@ export class BookListComponent implements OnInit {
   }
 
   onEdit(item) {
-    console.log('BookListComponent.onEdit()');
 
-    const state: PopUpData<Book> = {
+    const data: PopUpData<Book> = {
       item,
       props: {title: 'Edit Book', route: 'book'}
     };
 
     // apro la popUP
-    this.store$.dispatch(RouterStoreActions.RouterGo({
+    this.store$.dispatch(RouterStoreActions.RouterGoPopUp({
       path: ['book', {outlets: {popUp: ['edit']}}],
-      extras: {state}
+      data
     }));
 
   }
 
   onCopy(value) {
-    console.log('BookListComponent.onCopy()');
 
     const item = {...{}, ...value, ...{id: null}};
-    const state: PopUpData<Book> = {
+    const data: PopUpData<Book> = {
       item,
       props: {title: 'Copy Book', route: 'book'}
     };
 
-    this.store$.dispatch(RouterStoreActions.RouterGo({
+    this.store$.dispatch(RouterStoreActions.RouterGoPopUp({
       path: ['book', {outlets: {popUp: ['edit']}}],
-      extras: {state}
+      data
     }));
 
   }
