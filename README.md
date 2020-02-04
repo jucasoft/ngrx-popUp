@@ -100,12 +100,12 @@ src/
 
 Attualmente sono presenti due route-outlet:
 ````
-    <router-outlet></router-outlet> // primary  
+    <router-outlet></router-outlet> // se non viene indicato, il valore predefinito di name è 'primary'
     <router-outlet name='popUp'></router-outlet> // popUp
 ````
 Se necessario è possibile estendere questo sistema per gestire ulteriori router-outlet
 
-## apertura pagina su <router-outlet>
+## apertura pagina su "router-outlet"
  
  - azione:  
  ````
@@ -146,7 +146,7 @@ per accedere al dato:
 this.store$.select(RouterStoreSelectors.selectPrimary);
 ````
 
-## apertura pagina su <router-outlet name='popUp'>
+## apertura pagina su "router-outlet name='popUp'"
 
  - azione:  
  ````
