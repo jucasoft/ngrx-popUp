@@ -5,9 +5,21 @@
  - Ridotte dipendenze
  - Guard.
  - grazie al @ngrx/router-store funziona perfettamente il time travel"
- - history back del broser
- 
- 
+ - history back del broser (esteso lo store @ngrx/router-store)
+ - i dati per la popUp/pagina vengono passati usando le rotte. 
+ ```
+// azione per l'apertura di una nuova pagina
+    this.store$.dispatch(RouterStoreActions.RouterGo({
+      path: [....],
+      data // dati passati alla pagina di destinazione
+    }));
+
+// azione specifica per l'apertura delle popUP
+    this.store$.dispatch(RouterStoreActions.RouterGoPopUp({
+      path: [....],
+      data // dati passati alla poUp di destinazione
+    }));
+```
  
  ## Contro
  - per ogni route-outlet è possibile aprire una sola PopUp. 
